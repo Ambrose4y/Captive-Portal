@@ -14,3 +14,10 @@ foreach ($users as $entry) {
         break;
     }
 }
+if ($valid) {
+    header('Location: success.html');
+    exit();
+} else {
+    echo "Invalid Credential.";
+    echo '<br><a href="index.html">Please try again</a>';
+}
