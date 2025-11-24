@@ -1,33 +1,49 @@
-body{
-    background: #f5f5f5;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+body {
+    margin: 0;
+    background: #0a0a23;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    margin: 80px auto;
     padding: 30px;
+    border-radius: 12px;
+    text-align: center;
 }
-.box{
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    display: inline-block;
+
+.logo {
+    width: 80px;
+    margin-bottom: 15px;
 }
-input[type="text"], input[type="password"]{
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
     border: 1px solid #ccc;
-    border-radius: 4px;
 }
-button{
-    background: #28a745;
-    color: white;
-    padding: 10px 20px;
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1a73e8;
     border: none;
-    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
 }
-.note{
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 15px;
+
+button:hover {
+    background: #0f5ad4;
+}
+
+.small {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #555;
 }

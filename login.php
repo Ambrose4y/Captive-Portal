@@ -1,24 +1,18 @@
 <?php
 
-$users = file('users.txt', FILE_IGNORE_NEW_LINES );
-
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-$valid = false;
-
-foreach ($users as $entry) {
-    list($user, $pass) = explode(',', $entry);
-    if ($username === trim($user) && $password === trim($pass)) {
-        $valid = true;
-        break;
-    }
-}
-if ($valid) {
-    header('Location: success.html');
+if (!isset($_POST['email'])) {
+    header("Location: ../index.html");
     exit();
-} else {
-    echo "Invalid Credential.";
-    echo '<br><a href="index.html">Please try again</a>';
 }
+
+$fullname = $_POST['fullname'];
+$email = $_POST['email'];
+
+// You can save to a database if you want
+file_put_contents("logins.txt", "$fullname - $email\n", FILE_APPEND);
+
+// Redirect after login
+header("Location: ../success.html");
+exit();
+
 ?>
